@@ -14,6 +14,7 @@
   --color-fourth: #00adff;
   --color-font-primary: #ffffff;
   --color-font-secundary: #6e6e6e;
+  --color-dot-primary: #d0d0d0;
 }
 
 /* Resets da página */
@@ -30,11 +31,13 @@ a {
   @apply font-poppins;
 }
 
-/* Esconder scrollbar mas manter rolagem */
-.scrollbar-hidden::-webkit-scrollbar {
-  display: none;
+/** Dots do carrossel */
+/* Bolinhas do carrossel */
+.btn-xs {
+  @apply w-2 h-2 rounded-full bg-gray-300 p-0; /* cinza quando não ativo */
 }
-.scrollbar-hidden {
-  -ms-overflow-style: none; /* IE e Edge */
-  scrollbar-width: none; /* Firefox */
+
+/* Bolinha ativa */
+.btn-primary {
+  @apply bg-primary; /* cor do botão ativo */
 }

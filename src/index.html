@@ -42,12 +42,14 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <!-- * Favicon -->
-    <link rel="shortcut icon" href="../dist/assets/logos-icones/amil-dental-favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="../dist/assets/logos-icones/amil-dental-favicon.ico" />
+    <link rel="shortcut icon" href="/dist/assets/favicon/amil-dental-favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/dist/assets/favicon/amil-dental-favicon.ico" />
 
     <!-- CSS -->
     <link rel="preload" href="/dist/css/output.css" as="style" onload="this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="/dist/css/output.css" /></noscript>
+    <!-- CSS da DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   </head>
   <body class="overflow-auto">
     <!-- Cabeçalho -->
@@ -100,12 +102,143 @@
             <!-- Titulo -->
             <h1 class="text-[1.25rem] font-bold mb-[0.25rem]">Nunca foi tão fácil cuidar da sua saúde bucal!</h1>
             <!-- Texto -->
-            <p class="text-[0.75rem]">Conheça e contrate aqui o melhor plano dental para você, sua família ou empresa</p>
+            <p class="text-[0.75rem] font-medium">Conheça e contrate aqui o melhor plano dental para você, sua família ou empresa</p>
           </div>
           <!-- Ancora para Amil -->
           <div class="flex justify-center text-center mt-[1rem] border border-font-primary w-[10.75rem] rounded-[100px]"><a href="#" class="font-semibold text-[0.875rem] py-[0.5rem]">Garantir meu sorriso</a></div>
         </div>
       </article>
+
+      <!-- Primeiro carrossel -->
+      <section class="flex flex-col items-center">
+        <!-- Plano familia -->
+        <!-- Primeiro plano -->
+        <div class="w-[19.938rem]">
+          <div class="text-secundary text-[1.25rem]">
+            <h1>Amil dental <span class="font-bold">individual</span> e <span class="font-bold">familiar</span></h1>
+          </div>
+          <div class="my-[1rem] items-center">
+            <div class="flex items-center">
+              <img src="/dist/assets/icones/user.svg" alt="" class="w-[1.25rem] h-[1.25rem] mr-[0.5rem]" />
+              <h2 class="text-font-secundary font-bold">Plano Individual</h2>
+            </div>
+            <p class="text-font-secundary text-[0.75rem]">O melhor plano dental para 1 ou 2 pessoas deixarem o seu sorriso em dia.</p>
+          </div>
+          <div><a href="" class="text-primary font-bold text-[0.875rem]">Saber mais</a></div>
+        </div>
+        <!-- Segundo plano -->
+        <div class="w-[19.938rem] mb-[1.75rem]">
+          <div class="my-[1rem] items-center">
+            <div class="flex items-center">
+              <img src="/dist/assets/icones/user.svg" alt="" class="w-[1.25rem] h-[1.25rem] mr-[0.5rem]" />
+              <h2 class="text-font-secundary font-bold">Plano Familiar</h2>
+            </div>
+            <p class="text-font-secundary text-[0.75rem]">O melhor plano dental para famílias com 3 ou mais pessoas.</p>
+          </div>
+          <div><a href="" class="text-primary font-bold text-[0.875rem]">Saber mais</a></div>
+        </div>
+
+        <!-- Primeiro ccarrossel -->
+        <div class="carousel carousel-center max-w-md space-x-[1.75rem]">
+          <!-- Card 1 -->
+          <div id="card-family1" class="carousel-item ml-[1.75rem]">
+            <a href=""><img src="/dist/assets/cards/card-familia.jpg" class="w-[18rem] h-[27.5rem]" /></a>
+          </div>
+          <!-- Card 2 -->
+          <div id="card-family2" class="carousel-item">
+            <a href=""><img src="/dist/assets/cards/card-familia.jpg" class="w-[18rem] h-[27.5rem]" /></a>
+          </div>
+          <!-- Card 3 -->
+          <div id="card-family3" class="carousel-item mr-[1.75rem]">
+            <a href=""><img src="/dist/assets/cards/card-familia.jpg" class="w-[18rem] h-[27.5rem]" /></a>
+          </div>
+        </div>
+        <!-- Dots de navegação -->
+        <div class="flex w-full justify-center gap-2 py-[1.75rem]">
+          <a href="#card-family1" class="btn btn-xs"></a>
+          <a href="#card-family2" class="btn btn-xs"></a>
+          <a href="#card-family3" class="btn btn-xs"></a>
+        </div>
+      </section>
+
+      <!-- Plano pequenas empresas -->
+      <section class="flex flex-col items-center my-[1.75rem]">
+        <!-- Primeiro plano -->
+        <div class="w-[19.938rem] mb-[1.75rem]">
+          <div class="text-secundary text-[1.25rem]">
+            <h1>Amil dental e <span class="font-bold">pequenas </span> e <span class="font-bold">médias empresas</span></h1>
+          </div>
+          <div class="my-[1rem] items-center">
+            <div class="flex items-center">
+              <img src="/dist/assets/icones/business.svg" alt="" class="w-[1.25rem] h-[1.25rem] mr-[0.5rem]" />
+              <h2 class="text-font-secundary font-bold">Plano Empresarial</h2>
+            </div>
+            <p class="text-font-secundary text-[0.75rem]">O melhor plano dental para empresas com 2 ou mais colaboradores.</p>
+          </div>
+          <div><a href="" class="text-primary font-bold text-[0.875rem]">Saber mais</a></div>
+        </div>
+
+        <!--Segundo carrossel -->
+        <div class="carousel carousel-center max-w-md space-x-[1.75rem]">
+          <!-- Card 1 -->
+          <div id="card-business1" class="carousel-item ml-[1.75rem]">
+            <a href=""><img src="/dist/assets/cards/card-empresarial.jpg" class="w-[18rem] h-[27.5rem]" /></a>
+          </div>
+          <!-- Card 2 -->
+          <div id="card-business2" class="carousel-item">
+            <a href=""><img src="/dist/assets/cards/card-empresarial.jpg" class="w-[18rem] h-[27.5rem]" /></a>
+          </div>
+          <!-- Card 3 -->
+          <div id="card-business3" class="carousel-item mr-[1.75rem]">
+            <a href=""><img src="/dist/assets/cards/card-empresarial.jpg" class="w-[18rem] h-[27.5rem]" /></a>
+          </div>
+        </div>
+        <!-- Dots de navegação -->
+        <div class="flex w-full justify-center gap-2 py-[1.75rem]">
+          <a href="#card-business1" class="btn btn-xs"></a>
+          <a href="#card-business2" class="btn btn-xs"></a>
+          <a href="#card-business3" class="btn btn-xs"></a>
+        </div>
+      </section>
+      <!-- Plano Empresarial Preimum -->
+      <section class="flex flex-col items-center my-[1.75rem]">
+        <!-- Primeiro plano -->
+        <div class="w-[19.938rem] mb-[1.75rem]">
+          <div class="text-secundary text-[1.25rem]">
+            <h1>Amil dental <span class="font-bold">premium empresarial </span></h1>
+          </div>
+          <div class="my-[1rem] items-center">
+            <div class="flex items-center">
+              <img src="/dist/assets/icones/business.svg" alt="" class="w-[1.25rem] h-[1.25rem] mr-[0.5rem]" />
+              <h2 class="text-font-secundary font-bold">Plano Empresarial</h2>
+            </div>
+            <p class="text-font-secundary text-[0.75rem]">O melhor plano dental para empresas com 2 ou mais colaboradores.</p>
+          </div>
+          <div><a href="" class="text-primary font-bold text-[0.875rem]">Saber mais</a></div>
+        </div>
+
+        <!--Terceiro carrossel -->
+        <div class="carousel carousel-center max-w-md space-x-[1.75rem]">
+          <!-- Card 1 -->
+          <div id="card-business1" class="carousel-item ml-[1.75rem]">
+            <a href=""><img src="/dist/assets/cards/card-empresarial-premium.jpg" class="w-[18rem] h-[27.5rem]" /></a>
+          </div>
+          <!-- Card 2 -->
+          <div id="card-business2" class="carousel-item">
+            <a href=""><img src="/dist/assets/cards/card-empresarial-premium.jpg" class="w-[18rem] h-[27.5rem]" /></a>
+          </div>
+          <!-- Card 3 -->
+          <div id="card-business3" class="carousel-item mr-[1.75rem]">
+            <a href=""><img src="/dist/assets/cards/card-empresarial-premium.jpg" class="w-[18rem] h-[27.5rem]" /></a>
+          </div>
+        </div>
+        <!-- Dots de navegação -->
+        <div class="flex w-full justify-center gap-2 py-[1.75rem]">
+          <a href="#card-business1" class="btn btn-xs"></a>
+          <a href="#card-business2" class="btn btn-xs"></a>
+          <a href="#card-business3" class="btn btn-xs"></a>
+        </div>
+      </section>
     </main>
     <!-- Rodapé -->
     <footer class="h-[14.125rem] bg-primary px-[1.75rem] py-[1.75rem]">
@@ -129,5 +262,8 @@
         <p class="text-[0.75rem]">Esse site é uma parceria com a <span class="font-bold">Bordin Corretora de Seguros</span></p>
       </div>
     </footer>
+    <!-- Script do DaisyUI (Carrossel) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="/dist/js/main.js"></script>
   </body>
 </html>
