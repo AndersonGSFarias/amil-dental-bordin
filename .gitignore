@@ -28,3 +28,4 @@ dist-ssr
 
 *.code-workspace
 .history
+*vercel.json
