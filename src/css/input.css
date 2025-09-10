@@ -1,0 +1,40 @@
+/* Fonte */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Tailwind */
+@import "tailwindcss";
+
+@theme {
+  /* Fontes */
+  --font-poppins: "Poppins", sans-serif;
+  /* Paleta de cores */
+  --color-primary: #29196d;
+  --color-secundary: #4f14ff;
+  --color-third: #f1edff;
+  --color-fourth: #00adff;
+  --color-font-primary: #ffffff;
+  --color-font-secundary: #6e6e6e;
+}
+
+/* Resets da página */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+button,
+p,
+a {
+  @apply font-poppins;
+}
+
+/* Esconder scrollbar mas manter rolagem */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* IE e Edge */
+  scrollbar-width: none; /* Firefox */
+}
