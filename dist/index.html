@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <!-- Meta básicos -->
     <meta charset="UTF-8" />
@@ -7,9 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- SEO principal -->
-    <title>Amil Dental | Planos Odontológicos Individuais, Familiares e Empresariais</title>
-    <meta name="description" content="Amil Dental oferece planos odontológicos individuais, familiares e empresariais com cobertura completa, contratação online e ampla rede de dentistas." />
-    <meta name="keywords" content="Amil Dental, plano odontológico, dental individual, dental familiar, dental empresarial, saúde bucal, dentista, contratação online" />
+    <title>Planos Amil Dental — Individual, Familiar e Empresarial | Seguros Bordin</title>
+    <meta name="description" content="Planos Amil Dental para pessoa física, família e empresas — contratação online, ampla rede credenciada e atendimento qualificado." />
     <meta name="author" content="Anderson G. S. Farias" />
     <meta name="robots" content="index, follow" />
 
@@ -23,17 +22,43 @@
 
     <!--  * ALTERAR PARA A URL CORRETA -->
     <meta property="og:url" content="https://www.seusite.com.br/" />
-    <meta property="og:image" content="../dist/assets/logos-icones/logo-amil.png" />
+    <!--                                 * ALTERAR PARA A URL CERTA -->
+    <meta property="og:image" content="https://segurosbordin.com.br/assets/logos/logo-amil.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Logo Amil Dental — Seguros Bordin" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="Amil Dental" />
 
-    <!-- * Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Amil Dental | Planos Odontológicos" />
-    <meta name="twitter:description" content="Conheça os planos odontológicos individuais, familiares e empresariais da Amil Dental com contratação online e ampla rede de dentistas." />
-    <meta name="twitter:image" content="../dist/assets/logos-icones/logo-amil.png" />
-    <meta name="twitter:site" content="@AmilDental" />
-    <meta name="twitter:creator" content="@AmilDental" />
+    <!-- JSON-LD: Organization / InsuranceAgency -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "InsuranceAgency",
+        "name": "Seguros Bordin",
+        "url": "https://segurosbordin.com.br",
+        "logo": "https://segurosbordin.com.br/assets/logos/logo-bordin.svg",
+        "description": "Seguros Bordin — autorizada Amil. Contratação de planos Amil Dental para pessoa física, família e empresas.",
+        "sameAs": ["https://www.facebook.com/bordinconsultoriaemseguros", "https://www.instagram.com/bordinseguros"],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+55-11-97249-3074",
+            "contactType": "customer service",
+            "areaServed": "BR",
+            "availableLanguage": ["Portuguese"]
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": " Rua Francisco Marengo, 500",
+          "addressLocality": "São Paulo",
+          "addressRegion": "SP",
+          "postalCode": "03313-000",
+          "addressCountry": "BR"
+        }
+      }
+    </script>
 
     <!-- Mobile / Browser -->
     <meta name="theme-color" content="#0066CC" />
@@ -42,37 +67,40 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <!-- * Favicon -->
-    <link rel="shortcut icon" href="../dist/assets/logos-icones/amil-dental-favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="../dist/assets/logos-icones/amil-dental-favicon.ico" />
+    <link rel="shortcut icon" href="/dist/assets/favicon/amil-dental-favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/dist/assets/favicon/amil-dental-favicon.ico" />
 
     <!-- CSS -->
     <link rel="preload" href="/dist/css/output.css" as="style" onload="this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="/dist/css/output.css" /></noscript>
+    <!-- CSS da DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   </head>
   <body class="overflow-auto">
     <!-- Cabeçalho -->
-    <header class="flex items-center bg-primary h-[3.125rem]">
-      <p class="text-[0.75rem] text-font-primary font-normal pl-[1rem]">Uma parceria com a <span class="font-bold">Bordin Corretora de Seguros</span></p>
+    <header>
+      <div class="flex items-center bg-primary h-[3.125rem]">
+        <p class="text-[0.75rem] text-font-primary font-normal pl-[1rem]">Uma parceria com a <span class="font-bold">Bordin Corretora de Seguros</span></p>
+      </div>
+      <!-- Barra de navegação -->
+      <nav class="flex justify-between items-center h-[4.688rem] px-[1rem]">
+        <!-- Logo da Amil -->
+        <img src="/dist/assets/logos/logo-amil.png" alt="Logo da Amil Dental" class="w-[4.375rem]" />
+        <div class="flex justify-center text-center gap-4">
+          <!-- Ancora para página da Amil -->
+          <a href="#" class="bg-secundary text-font-primary px-[0.75rem] py-[0.5rem] rounded-[100px] font-semibold text-[0.875rem]">Contrate agora</a>
+          <!-- Botão de menu -->
+          <button class="bg-third px-[0.75rem] py-[0.25rem] rounded-[100px]"><img src="/dist/assets/icones/menu.svg" alt="Ícone do Menu" class="w-[1.25rem]" /></button>
+        </div>
+      </nav>
     </header>
 
-    <!-- Barra de navegação -->
-    <nav class="flex justify-between items-center h-[4.688rem] px-[1rem]">
-      <!-- Logo da Amil -->
-      <img src="/dist/assets/logos/logo-amil.png" alt="Logo da Amil Dental" class="w-[4.375rem]" />
-      <div class="flex justify-center text-center gap-4">
-        <!-- Ancora para página da Amil -->
-        <a href="#" class="bg-secundary text-font-primary px-[0.75rem] py-[0.5rem] rounded-[100px] font-semibold text-[0.875rem]">Contrate agora</a>
-        <!-- Botão de menu -->
-        <button class="bg-third px-[0.75rem] py-[0.25rem] rounded-[100px]"><img src="/dist/assets/icones/menu.svg" alt="Ícone do Menu" class="w-[1.25rem]" /></button>
-      </div>
-    </nav>
-
-    <main>
+    <main id="main-content" role="main">
       <!-- Banner -->
       <section class="bg-[#D9D9D9] h-[15.375rem]"></section>
 
       <!-- Primeira sessão -->
-      <section class="w-[19.938rem] my-[1.75rem] mx-[1.75rem]">
+      <section class="max-w-xs w-full my-[1.75rem] mx-[1.75rem]">
         <!-- Titulo e subtitulo -->
         <div class="mb-[0.75rem]">
           <h1 class="text-primary font-bold text-[1.25rem]">Planos Amil Dental</h1>
@@ -100,14 +128,144 @@
             <!-- Titulo -->
             <h1 class="text-[1.25rem] font-bold mb-[0.25rem]">Nunca foi tão fácil cuidar da sua saúde bucal!</h1>
             <!-- Texto -->
-            <p class="text-[0.75rem]">Conheça e contrate aqui o melhor plano dental para você, sua família ou empresa</p>
+            <p class="text-[0.75rem] font-medium">Conheça e contrate aqui o melhor plano dental para você, sua família ou empresa</p>
           </div>
           <!-- Ancora para Amil -->
           <div class="flex justify-center text-center mt-[1rem] border border-font-primary w-[10.75rem] rounded-[100px]"><a href="#" class="font-semibold text-[0.875rem] py-[0.5rem]">Garantir meu sorriso</a></div>
         </div>
       </article>
-    </main>
 
+      <!-- Primeiro carrossel -->
+      <section class="flex flex-col items-center">
+        <!-- Plano familia -->
+        <!-- Primeiro plano -->
+        <div class="w-[19.938rem]">
+          <div class="text-secundary text-[1.25rem]">
+            <h1>Amil dental <span class="font-bold">individual</span> e <span class="font-bold">familiar</span></h1>
+          </div>
+          <div class="my-[1rem] items-center">
+            <div class="flex items-center">
+              <img src="/dist/assets/icones/user.svg" alt="Icone de usuário" class="w-[1.25rem] h-[1.25rem] mr-[0.5rem]" />
+              <h2 class="text-font-secundary font-bold">Plano Individual</h2>
+            </div>
+            <p class="text-font-secundary text-[0.75rem]">O melhor plano dental para 1 ou 2 pessoas deixarem o seu sorriso em dia.</p>
+          </div>
+          <div><a href="" class="text-primary font-bold text-[0.875rem]">Saber mais</a></div>
+        </div>
+        <!-- Segundo plano -->
+        <div class="w-[19.938rem] mb-[1.75rem]">
+          <div class="my-[1rem] items-center">
+            <div class="flex items-center">
+              <img src="/dist/assets/icones/user.svg" alt="Icone de usuário" class="w-[1.25rem] h-[1.25rem] mr-[0.5rem]" />
+              <h2 class="text-font-secundary font-bold">Plano Familiar</h2>
+            </div>
+            <p class="text-font-secundary text-[0.75rem]">O melhor plano dental para famílias com 3 ou mais pessoas.</p>
+          </div>
+          <div><a href="" class="text-primary font-bold text-[0.875rem]">Saber mais</a></div>
+        </div>
+
+        <!-- Primeiro ccarrossel -->
+        <div class="carousel carousel-center max-w-md px-4 space-x-[1.75rem]">
+          <!-- Card 1 -->
+          <div id="card-family1" class="carousel-item">
+            <a href=""><img src="/dist/assets/cards/card-familia.jpg" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+          </div>
+          <!-- Card 2 -->
+          <div id="card-family2" class="carousel-item">
+            <a href=""><img src="/dist/assets/cards/card-familia.jpg" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+          </div>
+          <!-- Card 3 -->
+          <div id="card-family3" class="carousel-item">
+            <a href=""><img src="/dist/assets/cards/card-familia.jpg" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+          </div>
+        </div>
+        <!-- Dots de navegação -->
+        <div class="flex w-full justify-center gap-2 py-[1.75rem]">
+          <a href="#card-family1" class="btn btn-xs"></a>
+          <a href="#card-family2" class="btn btn-xs"></a>
+          <a href="#card-family3" class="btn btn-xs"></a>
+        </div>
+      </section>
+
+      <!-- Plano pequenas empresas -->
+      <section class="flex flex-col items-center my-[1.75rem]">
+        <!-- Primeiro plano -->
+        <div class="w-[19.938rem] mb-[1.75rem]">
+          <div class="text-secundary text-[1.25rem]">
+            <h1>Amil dental e <span class="font-bold">pequenas </span> e <span class="font-bold">médias empresas</span></h1>
+          </div>
+          <div class="my-[1rem] items-center">
+            <div class="flex items-center">
+              <img src="/dist/assets/icones/business.svg" alt="Icone empresarial" class="w-[1.25rem] h-[1.25rem] mr-[0.5rem]" />
+              <h2 class="text-font-secundary font-bold">Plano Empresarial</h2>
+            </div>
+            <p class="text-font-secundary text-[0.75rem]">O melhor plano dental para empresas com 2 ou mais colaboradores.</p>
+          </div>
+          <div><a href="" class="text-primary font-bold text-[0.875rem]">Saber mais</a></div>
+        </div>
+
+        <!--Segundo carrossel -->
+        <div class="carousel carousel-center max-w-md px-4 space-x-[1.75rem]">
+          <!-- Card 1 -->
+          <div id="card-business1" class="carousel-item">
+            <a href=""><img src="/dist/assets/cards/card-empresarial.jpg" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+          </div>
+          <!-- Card 2 -->
+          <div id="card-business2" class="carousel-item">
+            <a href=""><img src="/dist/assets/cards/card-empresarial.jpg" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+          </div>
+          <!-- Card 3 -->
+          <div id="card-business3" class="carousel-item">
+            <a href=""><img src="/dist/assets/cards/card-empresarial.jpg" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+          </div>
+        </div>
+        <!-- Dots de navegação -->
+        <div class="flex w-full justify-center gap-2 py-[1.75rem]">
+          <a href="#card-business1" class="btn btn-xs"></a>
+          <a href="#card-business2" class="btn btn-xs"></a>
+          <a href="#card-business3" class="btn btn-xs"></a>
+        </div>
+      </section>
+      <!-- Plano Empresarial Preimum -->
+      <section class="flex flex-col items-center my-[1.75rem]">
+        <!-- Primeiro plano -->
+        <div class="w-[19.938rem] mb-[1.75rem]">
+          <div class="text-secundary text-[1.25rem]">
+            <h1>Amil dental <span class="font-bold">premium empresarial </span></h1>
+          </div>
+          <div class="my-[1rem] items-center">
+            <div class="flex items-center">
+              <img src="/dist/assets/icones/business.svg" alt="Icone empresarial" class="w-[1.25rem] h-[1.25rem] mr-[0.5rem]" />
+              <h2 class="text-font-secundary font-bold">Plano Empresarial</h2>
+            </div>
+            <p class="text-font-secundary text-[0.75rem]">O melhor plano dental para empresas com 2 ou mais colaboradores.</p>
+          </div>
+          <div><a href="" class="text-primary font-bold text-[0.875rem]">Saber mais</a></div>
+        </div>
+
+        <!--Terceiro carrossel -->
+        <div class="carousel carousel-center max-w-md px-4 space-x-[1.75rem]">
+          <!-- Card 1 -->
+          <div id="card-business-premium1" class="carousel-item">
+            <a href=""><img src="/dist/assets/cards/card-empresarial-premium.jpg" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+          </div>
+          <!-- Card 2 -->
+          <div id="card-business-premium2" class="carousel-item">
+            <a href=""><img src="/dist/assets/cards/card-empresarial-premium.jpg" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+          </div>
+          <!-- Card 3 -->
+          <div id="card-business-premium3" class="carousel-item">
+            <a href=""><img src="/dist/assets/cards/card-empresarial-premium.jpg" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+          </div>
+        </div>
+        <!-- Dots de navegação -->
+        <div class="flex w-full justify-center gap-2 py-[1.75rem]">
+          <a href="#card-business-premium1" class="btn btn-xs"></a>
+          <a href="#card-business-premium2" class="btn btn-xs"></a>
+          <a href="#card-business-premium3" class="btn btn-xs"></a>
+        </div>
+      </section>
+    </main>
     <!-- Rodapé -->
     <footer class="h-[14.125rem] bg-primary px-[1.75rem] py-[1.75rem]">
       <!-- Icones e logos -->
@@ -116,8 +274,8 @@
         <a href="#"><img src="/dist/assets/logos/logo-bordin.svg" alt="Logo da Bordin" class="w-[8.063rem]" /></a>
         <!-- Redes sociais -->
         <div class="flex justify-between w-[4.75rem]">
-          <a href="#"><img src="/dist/assets/icones/instagram.svg" alt="Icone do Instagram" class="w-[1.5rem]" /> </a>
-          <a href="#"><img src="/dist/assets/icones/facebook.svg" alt="Icone do Facebook" class="w-[1.5rem]" /></a>
+          <a href="https://www.instagram.com/bordinseguros" target="_blank" rel="noopener noreferrer" aria-label="Instagram - Abre em nova aba"><img src="/dist/assets/icones/instagram.svg" alt="Icone do Instagram" class="w-[1.5rem]" /> </a>
+          <a href="https://www.facebook.com/bordinconsultoriaemseguros" target="_blank" rel="noopener noreferrer" aria-label="Facebook - Abre em nova aba"><img src="/dist/assets/icones/facebook.svg" alt="Icone do Facebook" class="w-[1.5rem]" /></a>
         </div>
       </div>
       <!-- Outras páginas -->
@@ -130,5 +288,9 @@
         <p class="text-[0.75rem]">Esse site é uma parceria com a <span class="font-bold">Bordin Corretora de Seguros</span></p>
       </div>
     </footer>
+    <!-- Script customizado -->
+    <script src="/dist/js/main.js"></script>
+    <!-- Script do DaisyUI (Carrossel) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </body>
 </html>
