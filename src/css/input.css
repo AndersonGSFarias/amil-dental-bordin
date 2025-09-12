@@ -41,3 +41,9 @@ a {
 .btn-primary {
   @apply bg-primary; /* cor do botão ativo */
 }
+
+/* CSS para que os as setas de deslize do carrossel */
+.carousel-btn {
+  /* @apply border-primary text-primary hover:bg-third; */
+  @apply border-primary hover:border-none text-primary hover:text-third bg-third hover:bg-primary;
+}
