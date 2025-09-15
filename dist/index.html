@@ -81,9 +81,12 @@
     <link rel="preload" href="css/output.css" as="style" onload="this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="css/output.css" /></noscript>
     <!-- CSS da DaisyUI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/daisyui@5" as="style" onload="this.rel='stylesheet'" />
+    <noscript><link href="https://cdn.jsdelivr.net/combine/npm/daisyui@5/base/rootcolor.css,npm/daisyui@5/base/reset.css,npm/daisyui@5/base/scrollbar.css,npm/daisyui@5/base/svg.css,npm/daisyui@5/base/rootscrollgutter.css,npm/daisyui@5/base/properties.css,npm/daisyui@5/base/rootscrolllock.css,npm/daisyui@5/components/button.css,npm/daisyui@5/components/carousel.css,npm/daisyui@5/components/menu.css" rel="stylesheet" type="text/css" /></noscript>
+    <!-- Importação da Fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   </head>
-  <body class="overflow-auto">
+  <body class="overflow-y-scroll scroll-smooth">
     <div id="preloader"></div>
     <!-- Cabeçalho -->
     <header class="fixed top-0 left-0 w-[100%] z-1">
