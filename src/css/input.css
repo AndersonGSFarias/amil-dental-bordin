@@ -31,6 +31,27 @@ a {
   @apply font-poppins;
 }
 
+/* Preloader da página */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white; /* pode ser outra cor */
+  z-index: 9999; /* fica por cima de tudo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease;
+}
+
+/* efeito de fade-out */
+#preloader.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* Menu da barra de navegação */
 
 .menu li a:focus,

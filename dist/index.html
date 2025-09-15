@@ -84,6 +84,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   </head>
   <body class="overflow-auto">
+    <div id="preloader"></div>
     <!-- Cabeçalho -->
     <header class="fixed top-0 left-0 w-[100%] z-1">
       <div class="flex items-center bg-bordin-primary h-[3.125rem]">
@@ -110,7 +111,7 @@
       </nav>
     </header>
 
-    <main id="main-content" role="main" class="mt-[7.813rem]">
+    <main id="main-content" role="main" class="hidden mt-[7.813rem]">
       <!-- Banner (LCP) - usamos picture + srcset; NÃO lazy-load -->
       <!-- Coloque isso no lugar do banner mobile atual -->
       <section aria-label="Banner principal" class="banner-lcp">

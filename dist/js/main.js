@@ -118,3 +118,15 @@ carousels.forEach((carousel) => {
     prevBtn.addEventListener("touchstart", (e) => e.preventDefault(), { passive: false });
   }
 });
+
+// Preloader da página
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  const mainContent = document.getElementById("main-content");
+
+  // opcional: espera 0,5~1 segundo para dar aquele “piscar”
+  setTimeout(() => {
+    preloader.classList.add("hide"); // faz fade-out
+    mainContent.style.display = "block"; // mostra o conteúdo
+  }, 500);
+});
