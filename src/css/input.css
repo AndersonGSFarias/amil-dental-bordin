@@ -35,7 +35,13 @@ a {
 
 .menu li a:focus,
 .menu li a:active {
-  @apply bg-bordin-primary text-font-bordin-primary;
+  @apply bg-white text-bordin-secundary;
+}
+/* Centralizar a ancora das opções do menu ao pressionar */
+#family-plan,
+#business-plan,
+#business-premium-plan {
+  @apply scroll-mt-[20rem];
 }
 
 /** Dots do carrossel */
