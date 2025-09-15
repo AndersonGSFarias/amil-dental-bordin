@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR" class="scroll-smooth md:overflow-y-scroll">
   <head>
     <!-- Meta básicos -->
     <meta charset="UTF-8" />
@@ -108,11 +108,14 @@
 
     <main id="main-content" role="main" class="mt-[7.813rem]">
       <!-- Banner (LCP) - usamos picture + srcset; NÃO lazy-load -->
-      <section aria-label="Banner principal">
+      <!-- Coloque isso no lugar do banner mobile atual -->
+      <section aria-label="Banner principal" class="banner-lcp">
         <picture>
-          <source type="image/avif" srcset="assets/banners/banner-amil-e-bordin-mobile.avif 412w, assets/banners/banner-amil-e-bordin-desktop.avif 1920w" sizes="(max-width:767px) 100vw, 1920px" />
-          <source type="image/webp" srcset="assets/banners/banner-amil-e-bordin-mobile.webp 412w, assets/banners/banner-amil-e-bordin-desktop.webp 1920w" sizes="(max-width:767px) 100vw, 1920px" />
-          <img class="w-full h-auto" src="assets/banners/banner-amil-e-bordin-desktop.jpg" alt="Banner Amil parceria com Bordin" width="1920" height="500" fetchpriority="high" decoding="async" loading="eager" />
+          <source type="image/avif" media="(max-width: 768px)" srcset="assets/banners/banner-amil-e-bordin-mobile.avif 412w" />
+
+          <!-- OBS: width/height informam as dimensões originais (ex.: 1920x500).
+         Juntamente com CSS (display:block + aspect-ratio) evita CLS. -->
+          <img class="banner-img block max-w-full h-auto aspect-[1920/500] object-cover" src="assets/banners/banner-amil-e-bordin-mobile.avif" alt="Banner Amil parceria com Bordin - Mobile" width="1920" height="500" loading="eager" fetchpriority="high" decoding="async" />
         </picture>
       </section>
 
