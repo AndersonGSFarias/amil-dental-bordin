@@ -41,7 +41,7 @@ a {
 #family-plan,
 #business-plan,
 #business-premium-plan {
-  @apply scroll-mt-[20rem];
+  @apply scroll-mt-[10rem];
 }
 
 /** Dots do carrossel */
