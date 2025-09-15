@@ -39,10 +39,10 @@ a {
 
 /* Bolinha ativa */
 .btn-primary {
-  /* @apply bg-bordin-primary; cor do botão ativo */
+  @apply bg-bordin-primary; /* cor do botão ativo */
 }
 
 /* CSS para que os as setas de deslize do carrossel */
 .carousel-btn {
-  /* @apply hover:border-none text-bordin-primary hover:text-third bg-third hover:bg-bordin-primary; */
+  @apply hover:border-none text-bordin-primary hover:text-third bg-third hover:bg-bordin-primary;
 }
