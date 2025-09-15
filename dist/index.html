@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth md:overflow-y-scroll">
   <head>
+    <!-- Preconnect para otimização -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+
     <!-- Meta básicos -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -112,10 +116,13 @@
       <section aria-label="Banner principal" class="banner-lcp">
         <picture>
           <source type="image/avif" media="(max-width: 768px)" srcset="assets/banners/banner-amil-e-bordin-mobile.avif 412w" />
+          <source type="image/webp" media="(max-width: 768px)" srcset="assets/banners/banner-amil-e-bordin-mobile.webp 412w" />
+
+          <!-- desktop/source maiores ficam em outros <source> (se já tiver) -->
 
           <!-- OBS: width/height informam as dimensões originais (ex.: 1920x500).
          Juntamente com CSS (display:block + aspect-ratio) evita CLS. -->
-          <img class="banner-img block max-w-full h-auto aspect-[1920/500] object-cover" src="assets/banners/banner-amil-e-bordin-mobile.avif" alt="Banner Amil parceria com Bordin - Mobile" width="1920" height="500" loading="eager" fetchpriority="high" decoding="async" />
+          <img class="banner-img inline-flex md:hidden" src="assets/banners/banner-amil-e-bordin-mobile.avif" alt="Banner Amil parceria com Bordin - Mobile" width="1920" height="500" loading="eager" fetchpriority="high" decoding="async" style="display: block; max-width: 100%; height: auto; aspect-ratio: 1920/500; object-fit: cover" />
         </picture>
       </section>
 
@@ -373,6 +380,6 @@
     <!-- Script customizado -->
     <script src="js/main.js"></script>
     <!-- Script do DaisyUI (Carrossel) -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" defer crossorigin></script>
   </body>
 </html>
