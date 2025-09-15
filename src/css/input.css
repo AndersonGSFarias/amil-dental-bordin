@@ -8,13 +8,13 @@
   /* Fontes */
   --font-poppins: "Poppins", sans-serif;
   /* Paleta de cores */
-  --color-primary: #29196d;
-  --color-secundary: #4f14ff;
-  --color-third: #f1edff;
-  --color-fourth: #00adff;
-  --color-font-primary: #ffffff;
-  --color-font-secundary: #6e6e6e;
-  --color-dot-primary: #d0d0d0;
+  --color-bordin-primary: rgb(66, 42, 213);
+  --color-secundary: rgb(79, 20, 255);
+  --color-third: rgb(241, 237, 255);
+  --color-fourth: rgb(0, 173, 255);
+  --color-font-primary: rgb(255, 255, 255);
+  --color-font-secundary: rgb(110, 110, 110);
+  --color-dot-primary: rgba(208, 208, 208);
 }
 
 /* Resets da página */
@@ -39,10 +39,10 @@ a {
 
 /* Bolinha ativa */
 .btn-primary {
-  @apply bg-primary; /* cor do botão ativo */
+  /* @apply bg-bordin-primary; cor do botão ativo */
 }
 
 /* CSS para que os as setas de deslize do carrossel */
 .carousel-btn {
-  @apply border-primary hover:border-none text-primary hover:text-third bg-third hover:bg-primary;
+  /* @apply hover:border-none text-bordin-primary hover:text-third bg-third hover:bg-bordin-primary; */
 }
