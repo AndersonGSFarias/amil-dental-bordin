@@ -31,6 +31,13 @@ a {
   @apply font-poppins;
 }
 
+/* Menu da barra de navegação */
+
+.menu li a:focus,
+.menu li a:active {
+  @apply bg-bordin-primary text-font-bordin-primary;
+}
+
 /** Dots do carrossel */
 /* Bolinhas do carrossel */
 .btn-xs {
