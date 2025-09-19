@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR" class="scroll-smooth md:overflow-y-scroll">
   <head>
+    <!-- Preconnect para otimização -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+
     <!-- Meta básicos -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +16,12 @@
     <meta name="author" content="Anderson G. S. Farias" />
     <meta name="robots" content="index, follow" />
 
+    <!-- CSS -->
+    <link rel="preload" href="css/output.css" as="style" onload="this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="css/output.css" /></noscript>
+    <!-- CSS da DaisyUI -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/daisyui@5" as="style" onload="this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5" /></noscript>
     <!--  * ALTERAR PARA A URL CORRETA -->
     <link rel="canonical" href="https://amil-dental-bordin.vercel.app" />
 
@@ -66,17 +76,15 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
+    <!-- Otimização de geração de imagem -->
+    <link rel="preload" as="image" href="assets/banners/banner-amil-e-bordin-desktop.avif" imagesrcset="assets/banners/banner-amil-e-bordin-mobile.avif 412w, assets/banners/banner-amil-e-bordin-desktop.avif 1920w" imagesizes="(max-width:767px) 100vw, 1920px" />
+
     <!-- * Favicon -->
     <link rel="shortcut icon" href="assets/favicon/amil-dental-favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="assets/favicon/amil-dental-favicon.ico" />
-
-    <!-- CSS -->
-    <link rel="preload" href="css/output.css" as="style" onload="this.rel='stylesheet'" />
-    <noscript><link rel="stylesheet" href="css/output.css" /></noscript>
-    <!-- CSS da DaisyUI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   </head>
-  <body class="overflow-auto">
+  <body class="overflow-auto scroll-smooth">
+    <div id="preloader"></div>
     <!-- Cabeçalho -->
     <header class="fixed top-0 left-0 w-[100%] z-1">
       <div class="flex items-center bg-bordin-primary h-[3.125rem]">
@@ -103,10 +111,21 @@
       </nav>
     </header>
 
-    <main id="main-content" role="main" class="mt-[7.813rem]">
-      <!-- Banner -->
-      <img class="hidden md:inline-flex" fetchpriority="high" src="assets/banners/banner-amil-e-bordin-desktop.jpg" alt="Banner Amil parceria com Bordin - Desktop" />
-      <img class="inline-flex md:hidden" fetchpriority="high" src="assets/banners/banner-amil-e-bordin-mobile.jpg" alt="Banner Amil parceria com Bordin - Mobile" />
+    <main id="main-content" role="main" class="hidden mt-[7.813rem]">
+      <!-- Banner (LCP) - usamos picture + srcset; NÃO lazy-load -->
+      <!-- Coloque isso no lugar do banner mobile atual -->
+      <section aria-label="Banner principal" class="banner-lcp">
+        <picture>
+          <source type="image/avif" media="(max-width: 768px)" srcset="assets/banners/banner-amil-e-bordin-mobile.avif 412w" />
+          <source type="image/webp" media="(max-width: 768px)" srcset="assets/banners/banner-amil-e-bordin-mobile.webp 412w" />
+
+          <!-- desktop/source maiores ficam em outros <source> (se já tiver) -->
+
+          <!-- OBS: width/height informam as dimensões originais (ex.: 1920x500).
+         Juntamente com CSS (display:block + aspect-ratio) evita CLS. -->
+          <img class="banner-img inline-flex md:hidden" src="assets/banners/banner-amil-e-bordin-mobile.avif" alt="Banner Amil parceria com Bordin - Mobile" width="1920" height="500" loading="eager" fetchpriority="high" decoding="async" style="display: block; max-width: 100%; height: auto; aspect-ratio: 1920/500; object-fit: cover" />
+        </picture>
+      </section>
 
       <!-- Primeira sessão -->
       <section class="w-full md:w-[100%] max-w-xs md:max-w-11/12 md:px-[1.625rem] my-[1.75rem] mx-[1.75rem]">
@@ -179,35 +198,35 @@
           <div class="carousel carousel-center max-w-md md:max-w-11/12 space-x-[1.75rem]" id="carousel-family">
             <!-- Card 1 -->
             <div id="card-family1" class="carousel-item">
-              <a href="https://links.kitcorretoramil.com.br/ZLfocq1N"><img src="assets/cards/pf/pf205.jpg" alt="Plano 205" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+              <a href="https://links.kitcorretoramil.com.br/ZLfocq1N"><img src="assets/cards/pf/pf205.avif" alt="Plano 205" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
             </div>
             <!-- Card 2 -->
             <div id="card-family2" class="carousel-item">
-              <a href="https://links.kitcorretoramil.com.br/QUL67Pqw"><img src="assets/cards/pf/pfkids.jpg" alt="Plano Kids" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+              <a href="https://links.kitcorretoramil.com.br/QUL67Pqw"><img src="assets/cards/pf/pfkids.avif" alt="Plano Kids" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
             </div>
             <!-- Card 3 -->
             <div id="card-family3" class="carousel-item">
-              <a href="https://links.kitcorretoramil.com.br/zHuBBUpl"><img src="assets/cards/pf/pfe170.jpg" alt="Plano 170" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+              <a href="https://links.kitcorretoramil.com.br/zHuBBUpl"><img src="assets/cards/pf/pfe170.avif" alt="Plano 170" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
             </div>
             <!-- Card 4 -->
             <div id="card-family4" class="carousel-item">
-              <a href="https://links.kitcorretoramil.com.br/SGSesCq1"><img src="assets/cards/pf/pfe50.jpg" alt="Plano 50" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+              <a href="https://links.kitcorretoramil.com.br/SGSesCq1"><img src="assets/cards/pf/pfe50.avif" alt="Plano 50" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
             </div>
             <!-- Card 5 -->
             <div id="card-family5" class="carousel-item">
-              <a href="https://links.kitcorretoramil.com.br/WwZmE6hM"><img src="assets/cards/pf/pf-e60-1.jpg" alt="Plano 60" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+              <a href="https://links.kitcorretoramil.com.br/WwZmE6hM"><img src="assets/cards/pf/pf-e60-1.avif" alt="Plano 60" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
             </div>
             <!-- Card 6 -->
             <div id="card-family6" class="carousel-item">
-              <a href="https://links.kitcorretoramil.com.br/K43mIImD"><img src="assets/cards/pf/pfe80.jpg" alt="Plano 80" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+              <a href="https://links.kitcorretoramil.com.br/K43mIImD"><img src="assets/cards/pf/pfe80.avif" alt="Plano 80" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
             </div>
             <!-- Card 7 -->
             <div id="card-family7" class="carousel-item">
-              <a href="https://links.kitcorretoramil.com.br/DUyiDkF4"><img src="assets/cards/pf/pfe90.jpg" alt="Plano 90" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+              <a href="https://links.kitcorretoramil.com.br/DUyiDkF4"><img src="assets/cards/pf/pfe90.avif" alt="Plano 90" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
             </div>
             <!-- Card 8 -->
             <div id="card-family8" class="carousel-item">
-              <a href="https://links.kitcorretoramil.com.br/zHuBBUpl"><img src="assets/cards/pf/pfcl80.jpg" alt="Plano 180" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+              <a href="https://links.kitcorretoramil.com.br/zHuBBUpl"><img src="assets/cards/pf/pfcl80.avif" alt="Plano 180" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
             </div>
           </div>
 
@@ -252,27 +271,27 @@
           <div class="carousel carousel-center max-w-md md:max-w-11/12 space-x-[1.75rem]">
             <!-- Card 1 -->
             <div id="card-business1" class="carousel-item">
-              <a href="https://links.kitcorretoramil.com.br/8BTwnxLV"><img src="assets/cards/pme/pj205.jpg" alt="Plano Empresarial 205" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+              <a href="https://links.kitcorretoramil.com.br/8BTwnxLV"><img src="assets/cards/pme/pj205.avif" alt="Plano Empresarial 205" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
             </div>
             <!-- Card 2 -->
             <div id="card-business2" class="carousel-item">
-              <a href="https://links.kitcorretoramil.com.br/fN3vcKW9"><img src="assets/cards/pme/pje50.jpg" alt="Plano Empresarial 50" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+              <a href="https://links.kitcorretoramil.com.br/fN3vcKW9"><img src="assets/cards/pme/pje50.avif" alt="Plano Empresarial 50" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
             </div>
             <!-- Card 3 -->
             <div id="card-business3" class="carousel-item">
-              <a href="https://links.kitcorretoramil.com.br/A3L94Ddc"><img src="assets/cards/pme/pje60.jpg" alt="Plano Empresarial 60" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+              <a href="https://links.kitcorretoramil.com.br/A3L94Ddc"><img src="assets/cards/pme/pje60.avif" alt="Plano Empresarial 60" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
             </div>
             <!-- Card 4 -->
             <div id="card-business4" class="carousel-item">
-              <a href="https://links.kitcorretoramil.com.br/FApapDH7"><img src="assets/cards/pme/pje80.jpg" alt="Plano Empresarial 80" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+              <a href="https://links.kitcorretoramil.com.br/FApapDH7"><img src="assets/cards/pme/pje80.avif" alt="Plano Empresarial 80" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
             </div>
             <!-- Card 5 -->
             <div id="card-business5" class="carousel-item">
-              <a href="https://links.kitcorretoramil.com.br/nwi7Zxkh"><img src="assets/cards/pme/pje90.jpg" alt="Plano Empresarial 90" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+              <a href="https://links.kitcorretoramil.com.br/nwi7Zxkh"><img src="assets/cards/pme/pje90.avif" alt="Plano Empresarial 90" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
             </div>
             <!-- Card 6 -->
             <div id="card-business6" class="carousel-item">
-              <a href="https://links.kitcorretoramil.com.br/ToKVLacK"><img src="assets/cards/pme/pje170.jpg" alt="Plano Empresarial 170" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+              <a href="https://links.kitcorretoramil.com.br/ToKVLacK"><img src="assets/cards/pme/pje170.avif" alt="Plano Empresarial 170" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
             </div>
           </div>
           <button class="hidden md:inline-flex carousel-next btn btn-circle carousel-btn" aria-label="Próximo">❯</button>
@@ -311,19 +330,19 @@
           <div class="carousel carousel-center max-w-md md:max-w-11/12 space-x-[1.75rem]">
             <!-- Card 1 -->
             <div id="card-business-premium1" class="carousel-item">
-              <a href="https://links.kitcorretoramil.com.br/5bzPLqe6"><img src="assets/cards/pe/amil-dental-p1500.jpg" alt="Plano Empresarial Premium 1500" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+              <a href="https://links.kitcorretoramil.com.br/5bzPLqe6"><img src="assets/cards/pe/amil-dental-p1500.avif" alt="Plano Empresarial Premium 1500" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
             </div>
             <!-- Card 2 -->
             <div id="card-business-premium2" class="carousel-item">
-              <a href="https://links.kitcorretoramil.com.br/Of7rcid2"><img src="assets/cards/pe/amil-dental-p2500.jpg" alt="Plano Empresarial Premium 2500" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+              <a href="https://links.kitcorretoramil.com.br/Of7rcid2"><img src="assets/cards/pe/amil-dental-p2500.avif" alt="Plano Empresarial Premium 2500" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
             </div>
             <!-- Card 3 -->
             <div id="card-business-premium3" class="carousel-item">
-              <a href="https://links.kitcorretoramil.com.br/3E6lMtIb"><img src="assets/cards/pe/amil-dental-p6500.jpg" alt="Plano Empresarial Premium 6500" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+              <a href="https://links.kitcorretoramil.com.br/3E6lMtIb"><img src="assets/cards/pe/amil-dental-p6500.avif" alt="Plano Empresarial Premium 6500" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
             </div>
             <!-- Card 4 -->
             <div id="card-business-premium4" class="carousel-item">
-              <a href="https://links.kitcorretoramil.com.br/VIuWmJjV "><img src="assets/cards/pe/amil-dental-p7500.jpg" alt="Plano Empresarial Premium 7500" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
+              <a href="https://links.kitcorretoramil.com.br/VIuWmJjV "><img src="assets/cards/pe/amil-dental-p7500.avif" alt="Plano Empresarial Premium 7500" width="288" height="440" class="w-full max-w-[18rem] h-auto object-cover" /></a>
             </div>
           </div>
           <button class="hidden md:inline-flex carousel-next btn btn-circle carousel-btn" aria-label="Próximo">❯</button>
@@ -362,6 +381,6 @@
     <!-- Script customizado -->
     <script src="js/main.js"></script>
     <!-- Script do DaisyUI (Carrossel) -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" defer crossorigin></script>
   </body>
 </html>
