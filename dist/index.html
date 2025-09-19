@@ -87,7 +87,8 @@
     <div id="preloader"></div>
     <!-- Cabeçalho -->
     <header class="fixed top-0 left-0 w-[100%] z-1">
-      <div class="flex items-center bg-bordin-primary h-[3.125rem]">
+      <!-- * Antiga barra do header -->
+      <div class="hidden items-center bg-bordin-primary h-[3.5rem]">
         <p class="text-[0.75rem] text-font-bordin-primary font-normal pl-[1rem] md:pl-[5rem]">Uma parceria com a <span class="font-bold">Bordin Corretora de Seguros</span></p>
       </div>
       <!-- Barra de navegação -->
@@ -98,10 +99,10 @@
           <!-- Ancora para página da Amil -->
           <a href="#first-section" class="bg-bordin-secundary text-font-bordin-primary px-[0.75rem] py-[0.5rem] rounded-[100px] font-semibold text-[0.875rem] md:text-[1rem] transition duration-300 ease-in-out hover:scale-110">Contrate agora</a>
           <!-- Botão de menu -->
-          <div class="dropdown dropdown-end">
+          <div class="md:hidden dropdown dropdown-end">
             <div tabindex="0" role="button" class="bg-bordin-third px-[0.75rem] py-[0.75rem] rounded-[100px] hover:cursor-pointer"><img src="assets/icones/menu.svg" alt="Ícone do Menu" class="w-[1.25rem] md:w-[1.5rem]" /></div>
             <!-- Opções do Menu -->
-            <ul tabindex="0" class="dropdown-content menu bg-bordin-secundary border border-bordin-primary rounded-box z-1 w-62 md:w-82 md:text-[1rem] p-2 mr-5 text-font-third">
+            <ul tabindex="0" class="dropdown-content menu bg-bordin-primary border border-bordin-primary rounded-box z-1 w-62 md:w-82 md:text-[1rem] p-2 mr-5 text-font-third">
               <li><a href="#family-plan" class="text-bordin-third hover:text-bordin-primary hover:bg-white">Planos Familiares</a></li>
               <li><a href="#business-plan" class="text-bordin-third hover:text-bordin-primary hover:bg-white">Planos Empresariais</a></li>
               <li><a href="#business-premium-plan" class="text-bordin-third hover:text-bordin-primary hover:bg-white">Planos Empresariais Premium</a></li>
@@ -109,16 +110,18 @@
           </div>
         </div>
       </nav>
-      <div class="hidden md:flex items-center j bg-bordin-secundary h-[2.125rem]">
-        <ul class="flex justify-center w-[100%] text-font-bordin-primary font-normal gap-[20rem] pl-[1rem]">
-          <li><a href="#family-plan">Planos Familiares</a></li>
-          <li><a href="#business-plan">Planos Empresariais</a></li>
-          <li><a href="#business-premium-plan">Planos Empresariais Premium</a></li>
+
+      <!-- Menu de navegação desktop-->
+      <div class="hidden md:flex items-center bg-bordin-primary h-[2.125rem]">
+        <ul class="flex items-center justify-center w-[100%] text-font-bordin-primary font-normal gap-x-[20rem]">
+          <li class="transition duration-300 ease-in-out hover:scale-110"><a href="#family-plan" class="">Planos Familiares</a></li>
+          <li class="transition duration-300 ease-in-out hover:scale-110"><a href="#business-plan">Planos Empresariais</a></li>
+          <li class="transition duration-300 ease-in-out hover:scale-110"><a href="#business-premium-plan">Planos Empresariais Premium</a></li>
         </ul>
       </div>
     </header>
 
-    <main id="main-content" role="main" class="hidden mt-[9.938rem]">
+    <main id="main-content" role="main" class="hidden mt-[4.688rem] md:mt-[6.813rem]">
       <!-- Banner (LCP) - usamos picture + srcset; NÃO lazy-load -->
       <!-- Coloque isso no lugar do banner mobile atual -->
       <section aria-label="Banner principal" class="banner-lcp">
