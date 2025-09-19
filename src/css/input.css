@@ -8,13 +8,13 @@
   /* Fontes */
   --font-poppins: "Poppins", sans-serif;
   /* Paleta de cores */
-  --color-bordin-primary: rgb(66, 42, 213);
-  --color-bordin-secundary: rgb(79, 20, 255);
-  --color-bordin-third: rgb(241, 237, 255);
-  --color-bordin-fourth: rgb(0, 173, 255);
-  --color-font-bordin-primary: rgb(255, 255, 255);
-  --color-font-bordin-secundary: rgb(110, 110, 110);
-  --color-dot-primary: rgba(208, 208, 208);
+  --color-bordin-primary: #422ad5;
+  --color-bordin-secundary: #4f14ff;
+  --color-bordin-third: #f1edff;
+  --color-bordin-fourth: #00adff;
+  --color-font-bordin-primary: #ffffff;
+  --color-font-bordin-secundary: #6e6e6e;
+  --color-dot-primary: #d0d0d0;
 }
 
 /* Resets da página */
