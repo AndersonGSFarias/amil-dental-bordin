@@ -1,6 +1,6 @@
 // Seleciona todos os carrosséis
 const carousels = document.querySelectorAll(".carousel");
-const cooldownMs = 800;
+const cooldownMs = 0;
 const cooldownMap = new WeakMap();
 
 function isInCooldown(carousel) {

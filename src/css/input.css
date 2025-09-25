@@ -61,7 +61,8 @@ a {
 /* Centralizar a ancora das opções do menu ao pressionar */
 #family-plan,
 #business-plan,
-#business-premium-plan {
+#business-premium-plan,
+#first-section {
   @apply scroll-mt-[10rem];
 }
 
