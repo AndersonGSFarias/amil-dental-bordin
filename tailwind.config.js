@@ -1,8 +1,8 @@
 module.exports = {
-  content: ["./index.html", "./js/**/*.js"],
+  // Aponte para todos os arquivos HTML e JS dentro da pasta 'src'
+  content: ["./src/**/*.{html,js}", "./dist/index.html"],
   theme: {
     extend: {
-      // Você também pode adicionar a fonte aqui, se desejar
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },

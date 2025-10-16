@@ -91,6 +91,33 @@
       <nav class="flex justify-between items-center h-[4.688rem] px-[1rem] md:px-[5rem] bg-white">
         <!-- Logo da Amil -->
         <img src="assets/logos/logo-amil.svg" alt="Logo da Amil Dental" class="w-[4.375rem] md:w-[6rem]" width="280" height="172" />
+
+        <!-- Menu de navegação desktop-->
+        <div class="hidden md:flex px-5">
+          <ul class="flex items-center justify-center xl:gap-x-20 gap-x-10 w-full text-font-bordin-primary font-normal">
+            <li class="relative group text-bordin-primary text-[0.875rem] md:text-[1rem] transition duration-300 ease-in-out hover:cursor-pointer hover:scale-110">
+              <a href="#family-plan" class="inline-block">
+                Planos Familiares
+                <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-bordin-primary transition-all duration-300 ease-out group-hover:w-full"></span>
+              </a>
+            </li>
+
+            <li class="relative group text-bordin-primary text-[0.875rem] md:text-[1rem] transition duration-300 ease-in-out hover:cursor-pointer hover:scale-110">
+              <a href="#business-plan" class="inline-block">
+                Planos Empresariais
+                <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-bordin-primary transition-all duration-300 ease-out group-hover:w-full"></span>
+              </a>
+            </li>
+
+            <li class="relative group text-bordin-primary text-[0.875rem] md:text-[1rem] transition duration-300 ease-in-out hover:cursor-pointer hover:scale-110">
+              <a href="#business-premium-plan" class="inline-block">
+                Planos Empresariais Premium
+                <span class="absolute left-0 bottom-0 w-0 h-[1px] bg-bordin-primary transition-all duration-300 ease-out group-hover:w-full"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
         <div class="flex justify-center items-center text-center gap-4">
           <!-- Ancora para página da Amil -->
           <a href="#first-section" class="bg-bordin-secundary text-font-bordin-primary px-[0.75rem] py-[0.5rem] rounded-[100px] font-semibold text-[0.875rem] md:text-[1rem] transition duration-300 ease-in-out hover:scale-110">Contrate agora</a>
@@ -106,18 +133,9 @@
           </div>
         </div>
       </nav>
-
-      <!-- Menu de navegação desktop-->
-      <div class="hidden md:flex items-center bg-bordin-primary h-[3.125rem]">
-        <ul class="flex items-center justify-between w-full px-8 lg:px-20 text-font-bordin-primary font-normal">
-          <li class="bg-bordin-fourth px-4 rounded-[100px] transition duration-300 ease-in-out hover:cursor-pointer hover:scale-110 whitespace-nowrap"><a href="#family-plan">Planos Familiares</a></li>
-          <li class="bg-bordin-fourth px-4 rounded-[100px] transition duration-300 ease-in-out hover:cursor-pointer hover:scale-110 whitespace-nowrap"><a href="#business-plan">Planos Empresariais</a></li>
-          <li class="bg-bordin-fourth px-4 rounded-[100px] transition duration-300 ease-in-out hover:cursor-pointer hover:scale-110 whitespace-nowrap"><a href="#business-premium-plan">Planos Empresariais Premium</a></li>
-        </ul>
-      </div>
     </header>
 
-    <main id="main-content" role="main" class="hidden mt-[4.688rem] md:mt-[7.813rem]">
+    <main id="main-content" role="main" class="hidden mt-[4.688rem] md:mt-[4.813rem]">
       <!-- Banner (LCP) - usamos picture + srcset; NÃO lazy-load -->
       <!-- Coloque isso no lugar do banner mobile atual -->
       <section aria-label="Banner principal" class="banner-lcp">
